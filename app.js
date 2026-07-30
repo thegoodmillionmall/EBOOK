@@ -64,7 +64,7 @@ function setActive(index, options = {}) {
   });
 
   const activeTitle = activeSection.dataset.title || activeSection.querySelector("h2").textContent;
-  statusText.textContent = `กำลังอ่าน: ${activeTitle}`;
+  statusText.textContent = `\u0e01\u0e33\u0e25\u0e31\u0e07\u0e2d\u0e48\u0e32\u0e19: ${activeTitle}`;
   prevButton.disabled = currentIndex === 0;
   nextButton.disabled = currentIndex === sections.length - 1;
 

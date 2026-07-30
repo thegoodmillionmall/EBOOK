@@ -1,15 +1,378 @@
 :root {
-  --ink: #102033;
-  --muted: #587087;
-  --blue-900: #0b3d68;
-  --blue-700: #1467a3;
-  --blue-500: #28a8e0;
-  --blue-100: #dff5ff;
-  --blue-50: #f3fbff;
-  --mint: #49d3bd;
+  --ink: #161616;
+  --muted: #686068;
+  --blue-900: #111111;
+  --blue-700: #ef5b9c;
+  --blue-500: #ff8fbd;
+  --blue-100: #ffe5f0;
+  --blue-50: #fff7fb;
+  --mint: #ff6fab;
   --white: #ffffff;
-  --line: #d7e9f3;
-  --shadow: 0 22px 60px rgba(12, 71, 112, .14);
+  --line: #eadde4;
+  --shadow: 0 22px 60px rgba(17, 17, 17, .12);
+}
+
+/* Final theme pass: white / black / pink */
+body {
+  color: #161616;
+  background: linear-gradient(180deg, #ffffff 0%, #fff4f9 46%, #f3f1f3 100%);
+}
+
+.topbar {
+  background: rgba(255, 255, 255, .93);
+  border-bottom-color: rgba(17, 17, 17, .1);
+}
+
+.brand-mark {
+  box-shadow: 0 12px 26px rgba(17, 17, 17, .12);
+}
+
+.brand small,
+.lead,
+.playbook-copy p,
+.toc a,
+.chapter p,
+.chapter li,
+.chapter td,
+.chapter th,
+.formula-grid span,
+.persona-grid span,
+.summary-stack span,
+.download-grid span,
+figcaption {
+  color: #5f575f;
+}
+
+.top-actions a,
+.mode-switch,
+.mode-btn,
+.secondary-btn,
+.reader-nav button,
+.toc,
+.playbook-stage,
+.cover-panel,
+.chapter,
+.ebook,
+.chapter-visual,
+.workflow-visual div,
+.product-card-ui,
+.formula-grid div,
+.persona-grid div,
+.summary-stack div,
+.prompt-cards article,
+.download-grid a,
+figure {
+  border-color: #eadde4;
+}
+
+.mode-btn,
+.secondary-btn,
+.reader-nav button,
+.top-actions a {
+  color: #111111;
+  background: #ffffff;
+}
+
+.mode-btn.active,
+.primary-btn,
+.reader-nav button:last-child,
+.copy-btn.copied {
+  color: #ffffff;
+  background: linear-gradient(135deg, #111111, #ef5b9c);
+}
+
+.eyebrow,
+.section-label,
+.chapter-label,
+.copy-btn,
+.mini-action-row span,
+.video-frame span,
+.tap-card b,
+.tool-card span,
+.ebook-cover-card span {
+  color: #111111;
+  background: #ffd8e8;
+  border-color: rgba(239, 91, 156, .28);
+}
+
+h1,
+.chapter h2,
+.chapter h3,
+.playbook-copy h2,
+.toc p,
+.formula-grid b,
+.persona-grid b,
+.summary-stack b,
+.download-grid b,
+.workflow-visual b,
+.product-card-ui b,
+.sample-showcase figcaption b,
+.reader-nav span {
+  color: #111111;
+}
+
+.hero h1 span,
+.prompt-preview p,
+.calendar-visual b {
+  color: #ef5b9c;
+}
+
+.cover-panel {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .94), rgba(255, 229, 240, .82));
+  box-shadow: 0 30px 80px rgba(17, 17, 17, .1);
+}
+
+.creator-screen,
+.tap-board,
+.video-frame,
+.tool-card {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 216, 232, .72), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(239, 91, 156, .44), transparent 34%),
+    linear-gradient(145deg, #111111 0%, #2b2028 52%, #ef5b9c 100%);
+}
+
+.screen-top,
+.device-bar,
+.screen-cards div {
+  background: rgba(255, 255, 255, .15);
+  border-color: rgba(255, 255, 255, .28);
+}
+
+.screen-top span,
+.device-bar span {
+  background: #ffd8e8;
+}
+
+.ebook-cover-card {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .95) 0 4px, transparent 4px 100%),
+    radial-gradient(circle at 24% 20%, rgba(255, 216, 232, .84), transparent 26%),
+    linear-gradient(160deg, rgba(255, 255, 255, .96), rgba(255, 239, 246, .95) 34%, rgba(17, 17, 17, .96) 35%, rgba(17, 17, 17, .98));
+}
+
+.ebook-cover-card::after {
+  background: linear-gradient(180deg, #ef5b9c, #111111);
+}
+
+.prompt-preview {
+  color: #111111;
+  background: rgba(255, 255, 255, .94);
+}
+
+.prompt-preview i {
+  background: linear-gradient(90deg, rgba(239, 91, 156, .24), rgba(17, 17, 17, .06));
+}
+
+.intro-band,
+.site-footer,
+pre,
+.retention-card {
+  color: #ffffff;
+  background: #111111;
+}
+
+.intro-band p,
+.site-footer,
+code,
+.video-frame em,
+.ebook-cover-card em,
+.screen-top b,
+.device-bar b,
+.tap-card small,
+.tool-card p {
+  color: #fff1f7;
+}
+
+.ebook {
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, .12), transparent 8%, transparent 92%, rgba(239, 91, 156, .1)),
+    linear-gradient(135deg, #fff7fb 0%, #ffffff 48%, #fff1f7 100%);
+  box-shadow: 0 34px 90px rgba(17, 17, 17, .12);
+}
+
+.chapter {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .06), transparent 9%),
+    linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(255, 250, 252, .98));
+  scrollbar-color: rgba(239, 91, 156, .5) transparent;
+}
+
+.toc a.active,
+.toc a:hover,
+.highlight-strip strong,
+.highlight-strip span,
+.formula-grid div,
+.persona-grid div,
+.summary-stack div,
+.prompt-cards article,
+.download-grid a,
+td {
+  background: #fff7fb;
+}
+
+.chapter-visual,
+.example-box,
+.note {
+  background: linear-gradient(135deg, #fff7fb, #ffffff);
+}
+
+.retention-card i {
+  background: linear-gradient(180deg, #ffbdd8, #ef5b9c);
+}
+
+th {
+  background: #111111;
+}
+
+/* Pink monochrome theme override */
+.topbar {
+  background: rgba(255, 255, 255, .92);
+  border-bottom-color: rgba(17, 17, 17, .08);
+}
+
+.brand-mark {
+  box-shadow: 0 12px 26px rgba(17, 17, 17, .12);
+}
+
+.top-actions a,
+.mode-switch,
+.mode-btn,
+.secondary-btn,
+.reader-nav button {
+  border-color: rgba(17, 17, 17, .12);
+}
+
+.mode-btn.active,
+.primary-btn,
+.reader-nav button:last-child {
+  color: #ffffff;
+  background: linear-gradient(135deg, #111111, #ef5b9c);
+}
+
+.eyebrow,
+.section-label,
+.chapter-label,
+.video-frame span,
+.tool-card span,
+.copy-btn,
+.mini-action-row span,
+.tap-card b,
+.screen-top span,
+.device-bar span,
+.ebook-cover-card span {
+  color: #111111;
+  background: #ffd8e8;
+  border-color: rgba(239, 91, 156, .25);
+}
+
+.hero h1 span {
+  color: #ef5b9c;
+}
+
+.lead {
+  color: #3f383f;
+}
+
+.cover-panel,
+.playbook-stage,
+.toc,
+.sample-showcase figure,
+.generated-gallery figure,
+figure,
+.reader-nav {
+  border-color: var(--line);
+  box-shadow: 0 22px 60px rgba(17, 17, 17, .1);
+}
+
+.cover-panel {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .9), rgba(255, 229, 240, .75));
+}
+
+.creator-screen,
+.tap-board,
+.video-frame,
+.tool-card {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 216, 232, .72), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(239, 91, 156, .44), transparent 34%),
+    linear-gradient(145deg, #111111 0%, #2b2028 52%, #ef5b9c 100%);
+}
+
+.ebook-cover-card {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .95) 0 4px, transparent 4px 100%),
+    radial-gradient(circle at 24% 20%, rgba(255, 216, 232, .8), transparent 26%),
+    linear-gradient(160deg, rgba(255, 255, 255, .96), rgba(255, 239, 246, .95) 34%, rgba(17, 17, 17, .96) 35%, rgba(17, 17, 17, .98));
+}
+
+.ebook-cover-card::after {
+  background: linear-gradient(180deg, #ef5b9c, #111111);
+}
+
+.ebook-cover-card em,
+.screen-top b,
+.device-bar b {
+  color: #fff5f9;
+}
+
+.prompt-preview {
+  color: #111111;
+  background: rgba(255, 255, 255, .94);
+}
+
+.prompt-preview p {
+  color: #ef5b9c;
+}
+
+.prompt-preview i {
+  background: linear-gradient(90deg, rgba(239, 91, 156, .24), rgba(17, 17, 17, .06));
+}
+
+.intro-band,
+.site-footer,
+pre {
+  color: #ffffff;
+  background: #111111;
+}
+
+.intro-band p,
+.site-footer,
+code {
+  color: #fff1f7;
+}
+
+.ebook {
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, .12), transparent 8%, transparent 92%, rgba(239, 91, 156, .1)),
+    linear-gradient(135deg, #fff7fb 0%, #ffffff 48%, #fff1f7 100%);
+  border-color: var(--line);
+}
+
+.chapter {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .06), transparent 9%),
+    linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(255, 250, 252, .98));
+  border-color: var(--line);
+  scrollbar-color: rgba(239, 91, 156, .5) transparent;
+}
+
+.chapter-visual,
+.example-box,
+.note {
+  background: linear-gradient(135deg, #fff7fb, #ffffff);
+}
+
+.retention-card {
+  background: #111111;
+}
+
+.retention-card i {
+  background: linear-gradient(180deg, #ffbdd8, #ef5b9c);
+}
+
+th {
+  background: #111111;
 }
 
 * {
@@ -23,7 +386,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: linear-gradient(180deg, #f7fcff 0%, #eef9ff 44%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fff4f9 48%, #f6f3f5 100%);
   font-family: "Kanit", "Tahoma", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
@@ -1637,4 +2000,217 @@ figcaption {
     padding: 10px 12px;
     font-size: 15px;
   }
+}
+
+/* Final theme pass: white / black / pink */
+body {
+  color: #161616;
+  background: linear-gradient(180deg, #ffffff 0%, #fff4f9 46%, #f3f1f3 100%);
+}
+
+.topbar {
+  background: rgba(255, 255, 255, .93);
+  border-bottom-color: rgba(17, 17, 17, .1);
+}
+
+.brand-mark {
+  box-shadow: 0 12px 26px rgba(17, 17, 17, .12);
+}
+
+.brand small,
+.lead,
+.playbook-copy p,
+.toc a,
+.chapter p,
+.chapter li,
+.chapter td,
+.chapter th,
+.formula-grid span,
+.persona-grid span,
+.summary-stack span,
+.download-grid span,
+figcaption {
+  color: #5f575f;
+}
+
+.top-actions a,
+.mode-switch,
+.mode-btn,
+.secondary-btn,
+.reader-nav button,
+.toc,
+.playbook-stage,
+.cover-panel,
+.chapter,
+.ebook,
+.chapter-visual,
+.workflow-visual div,
+.product-card-ui,
+.formula-grid div,
+.persona-grid div,
+.summary-stack div,
+.prompt-cards article,
+.download-grid a,
+figure {
+  border-color: #eadde4;
+}
+
+.mode-btn,
+.secondary-btn,
+.reader-nav button,
+.top-actions a {
+  color: #111111;
+  background: #ffffff;
+}
+
+.mode-btn.active,
+.primary-btn,
+.reader-nav button:last-child,
+.copy-btn.copied {
+  color: #ffffff;
+  background: linear-gradient(135deg, #111111, #ef5b9c);
+}
+
+.eyebrow,
+.section-label,
+.chapter-label,
+.copy-btn,
+.mini-action-row span,
+.video-frame span,
+.tap-card b,
+.tool-card span,
+.ebook-cover-card span {
+  color: #111111;
+  background: #ffd8e8;
+  border-color: rgba(239, 91, 156, .28);
+}
+
+h1,
+.chapter h2,
+.chapter h3,
+.playbook-copy h2,
+.toc p,
+.formula-grid b,
+.persona-grid b,
+.summary-stack b,
+.download-grid b,
+.workflow-visual b,
+.product-card-ui b,
+.sample-showcase figcaption b,
+.reader-nav span {
+  color: #111111;
+}
+
+.hero h1 span,
+.prompt-preview p,
+.calendar-visual b {
+  color: #ef5b9c;
+}
+
+.cover-panel {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .94), rgba(255, 229, 240, .82));
+  box-shadow: 0 30px 80px rgba(17, 17, 17, .1);
+}
+
+.creator-screen,
+.tap-board,
+.video-frame,
+.tool-card {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 216, 232, .72), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(239, 91, 156, .44), transparent 34%),
+    linear-gradient(145deg, #111111 0%, #2b2028 52%, #ef5b9c 100%);
+}
+
+.screen-top,
+.device-bar,
+.screen-cards div {
+  background: rgba(255, 255, 255, .15);
+  border-color: rgba(255, 255, 255, .28);
+}
+
+.screen-top span,
+.device-bar span {
+  background: #ffd8e8;
+}
+
+.ebook-cover-card {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .95) 0 4px, transparent 4px 100%),
+    radial-gradient(circle at 24% 20%, rgba(255, 216, 232, .84), transparent 26%),
+    linear-gradient(160deg, rgba(255, 255, 255, .96), rgba(255, 239, 246, .95) 34%, rgba(17, 17, 17, .96) 35%, rgba(17, 17, 17, .98));
+}
+
+.ebook-cover-card::after {
+  background: linear-gradient(180deg, #ef5b9c, #111111);
+}
+
+.prompt-preview {
+  color: #111111;
+  background: rgba(255, 255, 255, .94);
+}
+
+.prompt-preview i {
+  background: linear-gradient(90deg, rgba(239, 91, 156, .24), rgba(17, 17, 17, .06));
+}
+
+.intro-band,
+.site-footer,
+pre,
+.retention-card {
+  color: #ffffff;
+  background: #111111;
+}
+
+.intro-band p,
+.site-footer,
+code,
+.video-frame em,
+.ebook-cover-card em,
+.screen-top b,
+.device-bar b,
+.tap-card small,
+.tool-card p {
+  color: #fff1f7;
+}
+
+.ebook {
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, .12), transparent 8%, transparent 92%, rgba(239, 91, 156, .1)),
+    linear-gradient(135deg, #fff7fb 0%, #ffffff 48%, #fff1f7 100%);
+  box-shadow: 0 34px 90px rgba(17, 17, 17, .12);
+}
+
+.chapter {
+  background:
+    linear-gradient(90deg, rgba(239, 91, 156, .06), transparent 9%),
+    linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(255, 250, 252, .98));
+  scrollbar-color: rgba(239, 91, 156, .5) transparent;
+}
+
+.toc a.active,
+.toc a:hover,
+.highlight-strip strong,
+.highlight-strip span,
+.formula-grid div,
+.persona-grid div,
+.summary-stack div,
+.prompt-cards article,
+.download-grid a,
+td {
+  background: #fff7fb;
+}
+
+.chapter-visual,
+.example-box,
+.note {
+  background: linear-gradient(135deg, #fff7fb, #ffffff);
+}
+
+.retention-card i {
+  background: linear-gradient(180deg, #ffbdd8, #ef5b9c);
+}
+
+th {
+  background: #111111;
 }
