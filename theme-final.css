@@ -13,7 +13,7 @@
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .real-image-gallery,
@@ -22,12 +22,15 @@
 }
 
 .real-image-gallery img {
-  height: 380px !important;
   width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  display: block;
 }
 
 .real-image-gallery figure.wide img {
-  height: 260px !important;
+  height: auto !important;
+  max-height: none !important;
 }
 
 .real-image-gallery figcaption {
@@ -50,10 +53,12 @@
 
 @media (max-width: 620px) {
   .real-image-gallery img {
-    height: 300px !important;
+    height: auto !important;
+    max-height: none !important;
   }
 
   .real-image-gallery figure.wide img {
-    height: 210px !important;
+    height: auto !important;
+    max-height: none !important;
   }
 }
