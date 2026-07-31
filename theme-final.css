@@ -42,6 +42,55 @@ code {
   font-family: var(--font-code) !important;
 }
 
+.week-plan-board {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 22px 0 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.week-plan-board div {
+  min-width: 120px;
+  padding: 14px;
+  border: 1px solid #f0bdd4;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fffafd, #fff1f8);
+}
+
+.week-plan-board b,
+.week-plan-board span,
+.week-plan-board em {
+  display: block;
+}
+
+.week-plan-board b {
+  color: #c12c72;
+  font-size: 14px;
+}
+
+.week-plan-board span {
+  margin: 5px 0 4px;
+  color: #111111;
+  font-weight: 900;
+}
+
+.week-plan-board em {
+  color: #655c63;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.prompt-cards p {
+  display: -webkit-box;
+  min-height: 4.6em;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .real-preview-frame img,
 .real-image-gallery img,
 .sample-showcase img {
@@ -115,6 +164,10 @@ code {
   .sample-showcase img {
     height: auto !important;
     max-height: none !important;
+  }
+
+  .week-plan-board {
+    grid-template-columns: repeat(7, minmax(142px, 1fr));
   }
 
   .real-image-gallery figure.wide img {
