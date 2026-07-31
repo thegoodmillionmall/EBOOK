@@ -91,6 +91,24 @@ code {
   -webkit-line-clamp: 3;
 }
 
+.live-promo-showcase {
+  grid-template-columns: 1fr !important;
+}
+
+.live-promo-showcase figure {
+  border-color: #f0bdd4 !important;
+  background: #ffffff !important;
+}
+
+.live-promo-showcase img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain !important;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(255, 244, 250, .96)),
+    repeating-linear-gradient(45deg, rgba(239, 91, 156, .06) 0 10px, transparent 10px 20px) !important;
+}
+
 .identity-map {
   position: relative;
   display: grid;
