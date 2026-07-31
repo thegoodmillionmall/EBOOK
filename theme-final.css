@@ -91,6 +91,93 @@ code {
   -webkit-line-clamp: 3;
 }
 
+.identity-map {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0 10px;
+  padding: 18px;
+  border: 1px solid #f0bdd4;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(255, 241, 248, .96)),
+    radial-gradient(circle at 50% 40%, rgba(239, 91, 156, .18), transparent 44%);
+}
+
+.identity-center,
+.identity-node {
+  border: 1px solid #f1c3d7;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 14px 34px rgba(59, 28, 45, .08);
+}
+
+.identity-center {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: grid;
+  align-content: center;
+  min-height: 220px;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(145deg, #111111, #a93670);
+  color: #ffffff;
+}
+
+.identity-center span {
+  color: #ffc8df;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.identity-center b {
+  display: block;
+  margin: 12px 0;
+  font-family: var(--font-ui);
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+}
+
+.identity-center em,
+.identity-node span {
+  color: inherit;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.identity-node {
+  min-height: 118px;
+  padding: 18px;
+}
+
+.identity-node b {
+  display: block;
+  margin-bottom: 8px;
+  color: #c12c72;
+  font-family: var(--font-ui);
+  font-size: 20px;
+}
+
+.identity-node span {
+  color: #5f5660;
+}
+
+.node-a,
+.node-c {
+  grid-column: 1;
+}
+
+.node-b,
+.node-d {
+  grid-column: 3;
+}
+
+.node-e {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
 .real-preview-frame img,
 .real-image-gallery img,
 .sample-showcase img {
@@ -168,6 +255,25 @@ code {
 
   .week-plan-board {
     grid-template-columns: repeat(7, minmax(142px, 1fr));
+  }
+
+  .identity-map {
+    grid-template-columns: 1fr;
+  }
+
+  .identity-center,
+  .identity-node,
+  .node-a,
+  .node-b,
+  .node-c,
+  .node-d,
+  .node-e {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .identity-center {
+    min-height: auto;
   }
 
   .real-image-gallery figure.wide img {
