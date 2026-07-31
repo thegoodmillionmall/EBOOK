@@ -1,19 +1,23 @@
 /* Final overrides loaded after the main stylesheet. */
 .real-preview-frame img,
-.real-image-gallery img {
+.real-image-gallery img,
+.sample-showcase img {
   object-fit: contain !important;
+  object-position: center top !important;
   background: #f3f1f3;
 }
 
-.real-preview-frame {
+.real-preview-frame,
+.sample-showcase figure {
   border-color: #eadde4;
 }
 
-.real-image-gallery figure {
+.real-image-gallery figure,
+.sample-showcase figure {
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .real-image-gallery,
@@ -21,7 +25,8 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
 }
 
-.real-image-gallery img {
+.real-image-gallery img,
+.sample-showcase img {
   width: 100%;
   height: auto !important;
   max-height: none !important;
@@ -39,6 +44,13 @@
   line-height: 1.45;
 }
 
+.sample-showcase figcaption {
+  position: static !important;
+  color: #171318 !important;
+  background: #ffffff !important;
+  font-weight: 800;
+}
+
 .gallery-note {
   display: inline-flex;
   align-items: center;
@@ -53,6 +65,11 @@
 
 @media (max-width: 620px) {
   .real-image-gallery img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .sample-showcase img {
     height: auto !important;
     max-height: none !important;
   }
