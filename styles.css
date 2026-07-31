@@ -438,9 +438,9 @@ th {
 }
 
 :root {
-  --font-thai: "LINE Seed Sans TH", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
-  --font-ui: "Inter", "LINE Seed Sans TH", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
-  --font-code: "Inter", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
+  --font-thai: "Anuphan", "LINE Seed Sans TH", "Noto Sans Thai", "Tahoma", sans-serif;
+  --font-ui: "Mitr", "Anuphan", "Inter", "Noto Sans Thai", "Tahoma", sans-serif;
+  --font-code: "Inter", "Anuphan", "Noto Sans Thai", "Tahoma", sans-serif;
 }
 
 html {
