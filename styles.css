@@ -437,6 +437,12 @@ th {
   box-sizing: border-box;
 }
 
+:root {
+  --font-thai: "LINE Seed Sans TH", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
+  --font-ui: "Inter", "LINE Seed Sans TH", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
+  --font-code: "Inter", "IBM Plex Sans Thai", "Noto Sans Thai", "Tahoma", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -445,7 +451,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: linear-gradient(180deg, #ffffff 0%, #fff4f9 48%, #f6f3f5 100%);
-  font-family: "Kanit", "Tahoma", sans-serif;
+  font-family: var(--font-thai);
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -1474,7 +1480,7 @@ pre {
 }
 
 code {
-  font-family: "Kanit", "Tahoma", sans-serif;
+  font-family: var(--font-code);
   font-size: 18px;
   line-height: 1.68;
   white-space: pre-wrap;
